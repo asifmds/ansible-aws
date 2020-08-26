@@ -1,0 +1,16 @@
+- hosts: localhost 
+  tasks: 
+  - name: pro os in AWS 
+    ec2: 
+      key_name: "mykey"
+      instance_type: "t2.micro"
+      image: "ami-05655c267c89566dd"
+      wait: "yes" 
+      count: 1 
+      vpc_subnet_id: "subnet-e932f7b3"
+      assign_public_ip: yes
+      region: "us-west-1"
+      state: present 
+      group_id: "sg-e98400f9c"
+      aws_access_key: "AKIAXADAW7GTFX43OE22U7" 
+      aws_secret_key: "lBfXSZaVhkjoi3354jOZ6b6dMBrgfgfdiNPxcYDfJDpEMzksaZ"
